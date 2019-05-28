@@ -9,7 +9,7 @@ module Refinery
                     :datastore_root_path, :trust_file_extensions, :whitelisted_mime_types, :skin_css_class
 
     self.dragonfly_insert_before = 'ActionDispatch::Callbacks'
-    self.dragonfly_secret = "699af84647444a936b418014d4fb1308ab164bb598e76634"
+    self.dragonfly_secret = Refinery::Dragonfly.secret
     self.dragonfly_url_format = '/system/videos/:job/:basename.:format'
     self.trust_file_extensions = false
     self.max_file_size = 524288000
